@@ -1,64 +1,26 @@
-# Comparative Analysis of Kalman Filter Variants for Orbital State Estimation
+# DSIP Kalman Accuracy vs Uncertainty
 
-Course project for Digital Signals and Images Processing (DSIP).
+This project simulates a spaceship gravitating around the moon in a dynamic non-linear system. The simulation introduces gravitational pull and synthetic noise to simulate real-world unpredictable external forces. 
 
-## Overview
-This repository contains a study of orbital state estimation in a 3D simulation scenario. The analysis is based on noisy observations and focuses on Kalman filter-based estimation.
+The primary objective is to apply Kalman filter algorithms to estimate the true state (position, velocity, acceleration) of the spaceship from the noisy data, and to explore the balance between accuracy and uncertainty.
 
-## Objective
-The primary objective is to examine the tradeoff between estimation accuracy and uncertainty in Kalman filtering.
+## Project Structure
 
-The project compares multiple Kalman filter variants to evaluate how each model balances:
-- numerical estimation error;
-- uncertainty representation through covariance/confidence behavior.
+Please refer to the docs/docs.md file for detailed information regarding the directory layout and the contents of each directory.
 
-## Methodological Scope
-- Simulation of orbital motion and noisy measurements.
-- State estimation and trajectory reconstruction.
-- Comparative assessment of filter variants using quantitative error indicators and uncertainty-related measures.
-- Visual inspection through 3D plots and animation outputs.
+## Installation
 
-## Repository Structure
-- REAL_WORLD_SIMULATION.ipynb: simulation workflow and data generation/handling.
-- FINAL_PPRESENTATION.ipynb: estimation analysis, metric computation, and visualization.
-- orbiting.csv: baseline trajectory data.
-- orbiting_noisy.csv: noisy observation data.
-- results_2.csv, results_n.csv: exported experimental results.
-- imgs/: generated image frames for visual outputs.
-- *.mp4: generated animation files.
+1. Ensure Python 3 is installed.
+2. Install the required dependencies using pip:
+   `ash
+   pip install -r requirements.txt
+   `
 
-## Software Requirements
-Install the following Python packages:
-- numpy
-- matplotlib
-- plotly
-- scipy
-- opencv-python
-- perlin-noise
-- jupyter
+## Running the Project
 
-Example installation command:
-pip install numpy matplotlib plotly scipy opencv-python perlin-noise jupyter
-
-## Execution
-1. Open REAL_WORLD_SIMULATION.ipynb and run all cells in order.
-2. Open FINAL_PPRESENTATION.ipynb and run all cells in order.
-3. Review generated CSV, image, and video outputs for comparison results.
-
-## Expected Outputs
-- Predicted vs reference trajectory visualizations.
-- Quantitative comparison of Kalman filter variants.
-- Error and uncertainty-oriented evaluation artifacts.
-
-## Visual Previews
-Here are some examples of the trajectory estimations demonstrating the scope of the project:
-
-### Baseline Simulation
-<video src="https://github.com/supernino02/DSIP-Kalman-Accuracy-vs-Uncertainty/blob/main/animation.mp4?raw=true" controls="controls" width="100%">
-</video>
-
-### Kalman Filter Model 1A
-<video src="https://raw.githubusercontent.com/supernino02/DSIP-Kalman-Accuracy-vs-Uncertainty/main/model_1A.mp4" controls="controls" muted="muted" width="600"></video>
-
-### Kalman Filter Model 2
-<video src="https://raw.githubusercontent.com/supernino02/DSIP-Kalman-Accuracy-vs-Uncertainty/main/model_2.mp4" controls="controls" muted="muted" width="600"></video>
+1. Navigate to the 
+otebooks/ directory.
+2. Open REAL_WORLD_SIMULATION.ipynb to run the mathematical and physical basis of the model. 
+3. Open FINAL_PPRESENTATION.ipynb to see the results, the Kalman logic, and the generated comparative plots.
+4. Execute the cells sequentially. 
+> Note: The data outputs (like CSVs) will be generated in the ../data/ directory, and video renderings in the ../videos/ directory.
